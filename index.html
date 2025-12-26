@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDVPortfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: {
+                        navy: { 800: '#1e293b', 900: '#0f172a' },
+                        highlight: '#38bdf8',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-[#0a192f] to-slate-900 text-slate-200 font-sans min-h-screen relative">
+
+    <nav class="fixed w-full z-50 glass top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-highlight tracking-widest">LDV<span class="text-white">.</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#skills" class="nav-link">Skills</a>
+                        <a href="#tech-stack" class="nav-link">Tech Stack</a>
+                        <a href="#certificate" class="nav-link">Certificate</a>
+                        <a href="#blog" class="nav-link">Blog</a>
+                        <a href="#contact" class="bg-highlight text-slate-900 hover:bg-white transition-colors px-4 py-2 rounded-full text-sm font-bold">Contact</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden bg-slate-900 border-b border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#about" class="mobile-link">About</a>
+                <a href="#skills" class="mobile-link">Skills</a>
+                <a href="#tech-stack" class="mobile-link">Tech Stack</a>
+                <a href="#certificate" class="mobile-link">Certificate</a>
+                <a href="#blog" class="mobile-link">Blog</a>
+                <a href="#contact" class="block text-highlight font-bold px-3 py-2 rounded-md text-base">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <div class="hero-gradient-bg relative overflow-hidden">
+    
+        <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-32 px-4 relative z-10">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+                <div class="w-48 h-48 md:w-64 md:h-64 relative flex-shrink-0 group">
+                    <div class="absolute inset-0 bg-white rounded-full blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                    <img src="./images/avatar.jpg" alt="LDV Avatar" class="relative w-full h-full object-cover rounded-full border-4 border-white/30 shadow-2xl hover:scale-105 transition duration-500">
+                </div>
+                <div class="text-center md:text-left flex-1">
+                    <h2 class="text-white text-xl font-medium mb-2 opacity-90 tracking-wide">Xin chào, tôi là</h2>
+                    <h1 class="text-4xl md:text-7xl font-bold text-white mb-4 leading-tight">Lê Duy Vũ<br><span class="text-slate-200 text-3xl md:text-5xl opacity-80">Frontend Developer</span></h1>
+                    <p class="text-lg text-slate-100 italic mb-6 border-l-4 border-white/50 pl-4 bg-black/10 py-2 rounded-r-lg inline-block">"Code không chỉ là những dòng lệnh, mà là nghệ thuật biến ý tưởng thành hiện thực."</p>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                        <a href="#contact" class="bg-white text-[#003973] hover:bg-highlight hover:text-white transition-all duration-300 px-8 py-3 rounded-full font-bold shadow-lg">Contact me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <div class="gradient-bottom-fade"></div>
+    </div>
+
+   
+
+    <section id="about" class="py-20 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="section-title"><span class="border-b-4 border-highlight pb-1">About Me</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="glass p-8 rounded-xl hover-glow">
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-user text-highlight"></i> Giới thiệu
+                    </h3>
+                    <div class="space-y-4 text-slate-300 leading-relaxed text-justify">
+                        <p>
+                            Sinh ra và lớn lên tại mảnh đất <span class="text-highlight font-semibold">Đà Lạt</span> mộng mơ, từ nhỏ mình đã được bao quanh bởi những khung cảnh thiên nhiên tuyệt mỹ, từ những làn sương mờ ảo trên đồi thông đến nét kiến trúc cổ điển của phố núi. Chính sự ưu ái đó từ quê hương đã nuôi dưỡng trong mình một <span class="text-white font-medium italic">tâm hồn yêu cái đẹp và một đôi mắt nhạy bén với sự tinh tế</span>.
+                        </p>
+                        <p>
+                            Mình nhận ra đây chính là "mảnh đất" hoàn hảo để mình hiện thực hóa đam mê đó. Với mình, mỗi giao diện web là một khung hình, nơi mà sự sắp xếp của từng pixel, sự phối hợp giữa các mảng màu và khoảng trắng phải đạt được sự hài hòa tuyệt đối như cách thiên nhiên Đà Lạt vận hành.
+                        </p>
+                        <p>
+                            Hiện tại, mình đang là sinh viên IT tại <span class="text-white font-medium">HUTECH</span>. Mình không chỉ học cách viết code để máy tính hiểu, mà còn học cách "vẽ" bằng mã nguồn để chạm đến cảm xúc người dùng. Sự kết hợp giữa <span class="text-highlight">tư duy logic của kỹ thuật</span> và <span class="text-highlight">nhãn quan thẩm mỹ của người con phố núi</span> là giá trị cốt lõi mà mình mang vào trong từng sản phẩm.
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="info-card border-highlight">
+                        <h4 class="text-lg font-bold text-white mb-2">Education</h4>
+                        <p class="text-slate-300 text-sm">Công nghệ thông tin</p>
+                        <p class="text-slate-400 text-xs mt-1">Đại học Công Nghệ TP.HCM | 2022 - 2026</p>
+                    </div>
+                    <div class="info-card border-green-500">
+                        <h4 class="text-lg font-bold text-white mb-2">Ngoại ngữ</h4>
+                        <div class="flex items-center gap-2 text-slate-300"><i class="fas fa-language text-xl"></i><span>Tiếng Anh (Giao tiếp / Đọc hiểu)</span></div>
+                    </div>
+                    <div class="info-card border-purple-500">
+                        <h4 class="text-lg font-bold text-white mb-3">Sở thích</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge"><i class="fas fa-palette mr-1 text-pink-400"></i> Vẽ tranh</span>
+                            <span class="badge"><i class="fas fa-running mr-1 text-orange-400"></i> Chạy bộ</span>
+                            <span class="badge"><i class="fas fa-camera mr-1 text-blue-400"></i> Chụp hình</span>
+                            <span class="badge"><i class="fas fa-mountain mr-1 text-green-400"></i> Trekking</span>
+                            <span class="badge"><i class="fas fa-basketball-ball mr-1 text-red-500"></i> Bóng rổ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="section-title"><span class="border-b-4 border-highlight pb-1">My Skills</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="space-y-6 glass p-6 rounded-xl border-t-4 border-highlight hover-glow transition-all">
+                    <h3 class="text-xl font-bold text-highlight flex items-center gap-2 mb-4">
+                        <i class="fas fa-code"></i> Technical Core
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <i class="fas fa-terminal text-highlight mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Frontend Stack</h4>
+                                <p class="text-slate-400 text-xs">Có kiến thức về React, JavaScript (ES6+), HTML5 và CSS3 với cấu trúc code sạch.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-wind text-highlight mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Styling Frameworks</h4>
+                                <p class="text-slate-400 text-xs">Xây dựng giao diện cực nhanh và tối ưu với Tailwind CSS & Bootstrap.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-layer-group text-highlight mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Version Control</h4>
+                                <p class="text-slate-400 text-xs">Quản lý mã nguồn chuyên nghiệp bằng Git và quy trình làm việc trên GitHub.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="space-y-6 glass p-6 rounded-xl border-t-4 border-pink-500 hover-glow transition-all">
+                    <h3 class="text-xl font-bold text-pink-400 flex items-center gap-2 mb-4">
+                        <i class="fas fa-palette"></i> Design Mindset
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-pink-500 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">UI/UX Appreciation</h4>
+                                <p class="text-slate-400 text-xs">Cảm thụ màu sắc và bố cục tinh tế.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-pink-500 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Pixel Perfect</h4>
+                                <p class="text-slate-400 text-xs">Chuyển đổi chính xác từ bản thiết kế sang giao diện thực tế.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-pink-500 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Creative Layout</h4>
+                                <p class="text-slate-400 text-xs">Sắp xếp không gian hài hòa, mang lại cảm giác mượt mà khi sử dụng.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="space-y-6 glass p-6 rounded-xl border-t-4 border-green-500 hover-glow transition-all">
+                    <h3 class="text-xl font-bold text-green-400 flex items-center gap-2 mb-4">
+                        <i class="fas fa-seedling"></i> Professional Mindset
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <i class="fas fa-running text-green-500 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Resilience (Sức bền)</h4>
+                                <p class="text-slate-400 text-xs">Rèn luyện từ chạy bộ, kiên trì giải quyết mọi bài toán khó.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-lightbulb text-green-500 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Self-Learning</h4>
+                                <p class="text-slate-400 text-xs">Chủ động nghiên cứu tài liệu và cập nhật công nghệ mới mỗi ngày.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-comments text-green-500 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Teamwork</h4>
+                                <p class="text-slate-400 text-xs">Phối hợp nhịp nhàng và trình bày ý tưởng kỹ thuật rõ ràng.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <section id="tech-stack" class="py-16 bg-slate-900 border-y border-slate-800 overflow-hidden">
+        <h2 class="text-2xl font-bold text-center mb-8 text-slate-400 uppercase tracking-widest">Tech Stack</h2>
+        
+        <div class="relative flex overflow-hidden">
+            <div class="flex animate-infinite-scroll whitespace-nowrap">
+                <div class="flex items-center gap-16 px-8">
+                    <i class="fab fa-html5 text-5xl text-orange-500"></i>
+                    <i class="fab fa-css3-alt text-5xl text-blue-500"></i>
+                    <i class="fab fa-js text-5xl text-yellow-400"></i>
+                    <i class="fab fa-react text-5xl text-cyan-400"></i>
+                    
+                    <svg role="img" viewBox="0 0 24 24" class="w-12 h-12 fill-[#06B6D4]" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
+                    </svg>
+                
+                    <i class="fab fa-bootstrap text-5xl text-purple-600"></i>
+                    <span class="text-4xl font-bold text-blue-400">TS</span>
+                    <i class="fab fa-git-alt text-5xl text-red-500"></i>
+                    <i class="fab fa-github text-5xl text-white"></i>
+                </div>
+                <div class="flex items-center gap-16 px-8">
+                    <i class="fab fa-html5 text-5xl text-orange-500"></i>
+                    <i class="fab fa-css3-alt text-5xl text-blue-500"></i>
+                    <i class="fab fa-js text-5xl text-yellow-400"></i>
+                    <i class="fab fa-react text-5xl text-cyan-400"></i>
+                    
+                    <svg role="img" viewBox="0 0 24 24" class="w-12 h-12 fill-[#06B6D4]" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
+                    </svg>
+                
+                    <i class="fab fa-bootstrap text-5xl text-purple-600"></i>
+                    <span class="text-4xl font-bold text-blue-400">TS</span>
+                    <i class="fab fa-git-alt text-5xl text-red-500"></i>
+                    <i class="fab fa-github text-5xl text-white"></i>
+                </div>
+                <div class="flex items-center gap-16 px-8">
+                    <i class="fab fa-html5 text-5xl text-orange-500"></i>
+                    <i class="fab fa-css3-alt text-5xl text-blue-500"></i>
+                    <i class="fab fa-js text-5xl text-yellow-400"></i>
+                    <i class="fab fa-react text-5xl text-cyan-400"></i>
+                    
+                    <svg role="img" viewBox="0 0 24 24" class="w-12 h-12 fill-[#06B6D4]" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
+                    </svg>
+                
+                    <i class="fab fa-bootstrap text-5xl text-purple-600"></i>
+                    <span class="text-4xl font-bold text-blue-400">TS</span>
+                    <i class="fab fa-git-alt text-5xl text-red-500"></i>
+                    <i class="fab fa-github text-5xl text-white"></i>
+                </div>
+                <div class="flex items-center gap-16 px-8">
+                    <i class="fab fa-html5 text-5xl text-orange-500"></i>
+                    <i class="fab fa-css3-alt text-5xl text-blue-500"></i>
+                    <i class="fab fa-js text-5xl text-yellow-400"></i>
+                    <i class="fab fa-react text-5xl text-cyan-400"></i>
+                    
+                    <svg role="img" viewBox="0 0 24 24" class="w-12 h-12 fill-[#06B6D4]" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
+                    </svg>
+                
+                    <i class="fab fa-bootstrap text-5xl text-purple-600"></i>
+                    <span class="text-4xl font-bold text-blue-400">TS</span>
+                    <i class="fab fa-git-alt text-5xl text-red-500"></i>
+                    <i class="fab fa-github text-5xl text-white"></i>
+                </div>
+                <div class="flex items-center gap-16 px-8">
+                    <i class="fab fa-html5 text-5xl text-orange-500"></i>
+                    <i class="fab fa-css3-alt text-5xl text-blue-500"></i>
+                    <i class="fab fa-js text-5xl text-yellow-400"></i>
+                    <i class="fab fa-react text-5xl text-cyan-400"></i>
+                    
+                    <svg role="img" viewBox="0 0 24 24" class="w-12 h-12 fill-[#06B6D4]" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
+                    </svg>
+                
+                    <i class="fab fa-bootstrap text-5xl text-purple-600"></i>
+                    <span class="text-4xl font-bold text-blue-400">TS</span>
+                    <i class="fab fa-git-alt text-5xl text-red-500"></i>
+                    <i class="fab fa-github text-5xl text-white"></i>
+                </div>              
+            </div>
+        </div>
+    </section>
+
+    <section id="certificate" class="py-20 bg-slate-900/30">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="section-title"><span class="border-b-4 border-highlight pb-1">My Certificates</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="cert-card group hover-glow overflow-hidden cursor-pointer" onclick="openImageModal('./images/Essen1.png')">
+                    <div class="relative h-48 overflow-hidden mb-4 rounded-lg">
+                        <img src="./images/Essen1.png" alt="JavaScript Essentials 1" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-3xl mb-2"></i>
+                            <span class="text-white text-xs font-bold uppercase tracking-widest">Xem ảnh rõ nét</span>
+                        </div>
+                    </div>
+                    <div class="px-2">
+                        <h3 class="font-bold text-white text-lg">JavaScript Essentials 1</h3>
+                        <p class="text-sm text-highlight font-medium mb-2">Cisco Networking Academy</p>
+                        <ul class="text-left text-xs text-slate-300 space-y-1 opacity-80 group-hover:opacity-100 transition-opacity">
+                            <li>• Variables, Operators & Flow Control</li>
+                            <li>• Data types system (Primitive/Complex)</li>
+                            <li>• Algorithm thinking & problem analysis</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="cert-card group hover-glow overflow-hidden cursor-pointer" onclick="openImageModal('./images/Essen2.png')">
+                    <div class="relative h-48 overflow-hidden mb-4 rounded-lg">
+                        <img src="./images/Essen2.png" alt="JavaScript Essentials 22" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-3xl mb-2"></i>
+                            <span class="text-white text-xs font-bold uppercase tracking-widest">Xem ảnh rõ nét</span>
+                        </div>
+                    </div>
+                    <div class="px-2">
+                        <h3 class="font-bold text-white text-lg">JavaScript Essentials 2</h3>
+                        <p class="text-sm text-highlight font-medium mb-2">Cisco Networking Academy</p>
+                        <ul class="text-left text-xs text-slate-300 space-y-1 opacity-80 group-hover:opacity-100 transition-opacity">
+                            <li>• OOP: Prototypes & Inheritance</li>
+                            <li>• Asynchronous programming (Callbacks)</li>
+                            <li>• Regex & Advanced functions</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="cert-card group hover-glow overflow-hidden cursor-pointer" onclick="openImageModal('./images/Basic.png')">
+                    <div class="relative h-48 overflow-hidden mb-4 rounded-lg">
+                        <img src="./images/Basic.png" alt="Networking Basics" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-3xl mb-2"></i>
+                            <span class="text-white text-xs font-bold uppercase tracking-widest">Xem ảnh rõ nét</span>
+                        </div>
+                    </div>
+                    <div class="px-2">
+                        <h3 class="font-bold text-white text-lg">Networking Basics</h3>
+                        <p class="text-sm text-highlight font-medium mb-2">Cisco Networking Academy</p>
+                        <ul class="text-left text-xs text-slate-300 space-y-1 opacity-80 group-hover:opacity-100 transition-opacity">
+                            <li>• Network Protocols & Standards</li>
+                            <li>• IPv4 & IPv6 Addressing features</li>
+                            <li>• Connectivity troubleshooting</li>
+                        </ul>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    <section id="blog" class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="section-title"><span class="border-b-4 border-highlight pb-1">My Blog</span></h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass p-6 rounded-xl hover-glow flex flex-col h-full">
+                <div class="text-highlight mb-4"><i class="fab fa-js text-3xl"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">JavaScript ES6+: Những tính năng phải biết</h3>
+                <p class="text-slate-400 text-sm mb-4 flex-grow">Tìm hiểu về Arrow Functions, Destructuring và Template Literals giúp code sạch hơn.</p>
+                <button onclick="openBlog(1)" class="text-highlight font-bold text-sm hover:underline text-left">Đọc thêm →</button>
+            </div>
+
+            <div class="glass p-6 rounded-xl hover-glow flex flex-col h-full">
+                <div class="text-red-500 mb-4"><i class="fab fa-java text-3xl"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">Java OOP: 4 tính chất quan trọng</h3>
+                <p class="text-slate-400 text-sm mb-4 flex-grow">Phân tích tính Đóng gói, Kế thừa, Đa hình và Trừu tượng trong lập trình Java hướng đối tượng.</p>
+                <button onclick="openBlog(2)" class="text-highlight font-bold text-sm hover:underline text-left">Đọc thêm →</button>
+            </div>
+
+            <div class="glass p-6 rounded-xl hover-glow flex flex-col h-full">
+                <div class="text-highlight mb-4"><i class="fas fa-clock text-3xl"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">Xử lý bất đồng bộ: Callback, Promise & Async/Await</h3>
+                <p class="text-slate-400 text-sm mb-4 flex-grow">Cách JavaScript xử lý các tác vụ tốn thời gian mà không làm treo trình duyệt.</p>
+                <button onclick="openBlog(3)" class="text-highlight font-bold text-sm hover:underline text-left">Đọc thêm →</button>
+            </div>
+
+            <div class="glass p-6 rounded-xl hover-glow flex flex-col h-full">
+                <div class="text-highlight mb-4"><i class="fas fa-microchip text-3xl"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">DOM Manipulation cơ bản đến nâng cao</h3>
+                <p class="text-slate-400 text-sm mb-4 flex-grow">Hướng dẫn tương tác với các phần tử HTML bằng JavaScript thuần[cite: 9].</p>
+                <button onclick="openBlog(4)" class="text-highlight font-bold text-sm hover:underline text-left">Đọc thêm →</button>
+            </div>
+
+            <div class="glass p-6 rounded-xl hover-glow flex flex-col h-full">
+                <div class="text-red-500 mb-4"><i class="fas fa-database text-3xl"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">Kết nối Database với JDBC trong Java</h3>
+                <p class="text-slate-400 text-sm mb-4 flex-grow">Các bước cơ bản để kết nối ứng dụng Java với SQL Server hoặc MySQL.</p>
+                <button onclick="openBlog(5)" class="text-highlight font-bold text-sm hover:underline text-left">Đọc thêm →</button>
+            </div>
+
+            <div class="glass p-6 rounded-xl hover-glow flex flex-col h-full">
+                <div class="text-highlight mb-4"><i class="fas fa-vial text-3xl"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">Regex trong JavaScript: Xử lý chuỗi thông minh</h3>
+                <p class="text-slate-400 text-sm mb-4 flex-grow">Sử dụng Regular Expressions để kiểm tra email, số điện thoại cực kỳ nhanh chóng.</p>
+                <button onclick="openBlog(6)" class="text-highlight font-bold text-sm hover:underline text-left">Đọc thêm →</button>
+            </div>
+
+            <div class="glass p-6 rounded-xl hover-glow flex flex-col h-full">
+                <div class="text-red-500 mb-4"><i class="fas fa-layer-group text-3xl"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">Cấu trúc dữ liệu Array & List trong Java</h3>
+                <p class="text-slate-400 text-sm mb-4 flex-grow">Khi nào nên dùng ArrayList và khi nào dùng LinkedList cho tối ưu hiệu năng.</p>
+                <button onclick="openBlog(7)" class="text-highlight font-bold text-sm hover:underline text-left">Đọc thêm →</button>
+            </div>
+
+            <div class="glass p-6 rounded-xl hover-glow flex flex-col h-full">
+                <div class="text-highlight mb-4"><i class="fas fa-project-diagram text-3xl"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">Prototypes & Inheritance: Hiểu sâu về JS</h3>
+                <p class="text-slate-400 text-sm mb-4 flex-grow">Cơ chế kế thừa đặc biệt dựa trên nguyên mẫu của JavaScript.</p>
+                <button onclick="openBlog(8)" class="text-highlight font-bold text-sm hover:underline text-left">Đọc thêm →</button>
+            </div>
+
+            <div class="glass p-6 rounded-xl hover-glow flex flex-col h-full">
+                <div class="text-white mb-4"><i class="fas fa-exchange-alt text-3xl text-highlight"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">Java vs JavaScript: Sự khác biệt cơ bản</h3>
+                <p class="text-slate-400 text-sm mb-4 flex-grow">Phân biệt hai ngôn ngữ thường bị nhầm lẫn và ứng dụng của chúng trong thực tế.</p>
+                <button onclick="openBlog(9)" class="text-highlight font-bold text-sm hover:underline text-left">Đọc thêm →</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="contact" class="py-20 bg-slate-900">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="section-title"><span class="border-b-4 border-highlight pb-1">Get In Touch</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Send me a message</h3>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your Name" class="form-input">
+                        <input type="email" placeholder="Your Email" class="form-input">
+                        <textarea rows="4" placeholder="Message" class="form-input"></textarea>
+                        <button class="btn-primary w-full md:w-auto">Send Message <i class="fas fa-paper-plane ml-2"></i></button>
+                    </form>
+                </div>
+                <div class="flex flex-col justify-center space-y-8">
+                   
+                    <div class="contact-item">
+                        <div class="icon-circle text-highlight"><i class="fas fa-envelope"></i></div>
+                        <div><h4 class="font-bold text-white">Email</h4><p class="text-slate-400 text-sm">leduyvu0301@gmail.com</p></div>
+                    </div>
+                    <a href="#" class="contact-item group">
+                        <div class="icon-circle text-white group-hover:bg-black"><i class="fab fa-github"></i></div>
+                        <div><h4 class="font-bold text-white">GitHub</h4><p class="text-slate-400 text-sm">github.com/DuyVu0301</p></div>
+                    </a>
+                    <a href="#" class="contact-item group">
+                        <div class="icon-circle text-blue-500 group-hover:bg-blue-600 group-hover:text-white"><i class="fab fa-facebook-f"></i></div>
+                        <div><h4 class="font-bold text-white">Facebook</h4><p class="text-slate-400 text-sm">facebook.com/Duy Vu</p></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-6 text-center border-t border-slate-800">
+        <p class="text-slate-500 text-sm">&copy; 2025 LDV. Built with <i class="fas fa-heart text-red-500"></i></p>
+    </footer>
+
+    <div id="blog-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center px-4">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-md" id="modal-overlay"></div>
+        
+        <div class="glass max-w-4xl w-full max-h-[90vh] overflow-y-auto relative z-10 rounded-2xl shadow-2xl border border-slate-700/50">
+            <button id="close-modal" class="absolute top-5 right-5 text-slate-400 hover:text-white transition-colors text-2xl z-20">
+                <i class="fas fa-times"></i>
+            </button>
+    
+            <div id="modal-body-content" class="p-6 md:p-10">
+                </div>
+        </div>
+    </div>
+    <script src="blog-data.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
