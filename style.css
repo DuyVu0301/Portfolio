@@ -1,4 +1,4 @@
-/* Custom Scrollbar */
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -10,7 +10,7 @@
     border-radius: 4px;
 }
 
-/* Glassmorphism Effect */
+
 .glass {
     background: rgba(30, 41, 59, 0.7);
     backdrop-filter: blur(10px);
@@ -18,9 +18,9 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Common Components (Giúp HTML gọn hơn) */
+
 .nav-link {
-    /* @apply hover:text-highlight transition-colors px-3 py-2 rounded-md text-sm font-medium; */
+
     color: inherit;
     padding: 0.5rem 0.75rem;
     border-radius: 0.375rem;
@@ -115,7 +115,7 @@
 /* Tech Stack Animation */
 .animate-infinite-scroll {
     display: flex;
-    width: max-content; /* Đảm bảo chiều rộng dãn theo nội dung */
+    width: max-content; 
     animation: infinite-scroll 25s linear infinite;
 }
 
@@ -124,12 +124,12 @@
         transform: translateX(0);
     }
     to {
-        /* Chạy đến một nửa (hết nhóm 1) thì reset về 0 ngay lập tức */
+        
         transform: translateX(-50%);
     }
 }
 
-/* Hiệu ứng làm mờ 2 đầu để trông "nghệ" hơn */
+
 #tech-stack .relative::before,
 #tech-stack .relative::after {
     content: "";
@@ -235,18 +235,17 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 320px; /* Đảm bảo các card cao bằng nhau */
+    min-height: 320px; 
 }
-/* Tạo hiệu ứng gradient cho phần đầu trang */
-/* Lớp nền Gradient cho phần đầu trang */
+
 .hero-gradient-bg {
-    background: #003973;  /* Fallback */
+    background: #003973; 
     background: -webkit-linear-gradient(to right, #1d4555, #003973);
     background: linear-gradient(to right, #2850a6, #052445);
     position: relative;
 }       
 
-/* Đảm bảo chữ trắng nổi bật trên phần màu vàng nhạt (bên trái) */
+
 .hero-gradient-bg h1,   
 .hero-gradient-bg h2 {
     color: #ffffff;
@@ -258,7 +257,7 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Hiệu ứng mờ dần khi chuyển sang phần About Me */
+
 .gradient-bottom-fade {
     position: absolute;
     bottom: 0;

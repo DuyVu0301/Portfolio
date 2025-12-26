@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- 1. XỬ LÝ MOBILE MENU (GIỮ NGUYÊN LOGIC CỦA BẠN) ---
+
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
 
@@ -16,18 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 2. XỬ LÝ MODAL BLOG DETAIL (TÍNH NĂNG MỚI) ---
     const modal = document.getElementById('blog-modal');
     const modalBody = document.getElementById('modal-body-content');
     const closeModalBtn = document.getElementById('close-modal');
     const modalOverlay = document.getElementById('modal-overlay');
 
-    /**
-     * Hàm mở chi tiết bài viết
-     * Được gán vào window để thẻ HTML có thể gọi qua onclick
-     */
+
+
     window.openBlog = function(id) {
-        // blogDetails là biến hằng số từ file blog-data.js
+
         const post = blogDetails[id]; 
         
         if (post && modal && modalBody) {
@@ -77,39 +74,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
 
-            // Hiển thị Modal
+  
             modal.classList.remove('hidden');
-            // Chặn cuộn trang web chính khi đang xem Modal
+
             document.body.style.overflow = 'hidden';
         }
     };
 
-    // Hàm đóng Modal
+
     const closeBlogModal = () => {
         if (modal) {
             modal.classList.add('hidden');
             document.body.style.overflow = 'auto'; 
-            // Xóa nội dung để dừng video YouTube đang phát ngầm
+
             modalBody.innerHTML = '';
         }
     };
 
-    // Lắng nghe sự kiện đóng
+
     if (closeModalBtn) closeModalBtn.addEventListener('click', closeBlogModal);
     if (modalOverlay) modalOverlay.addEventListener('click', closeBlogModal);
 
-    // Đóng bằng phím Esc
+
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeBlogModal();
     });
 });
-// Hàm mở Modal xem ảnh phóng to
+
 window.openImageModal = function(imageSrc) {
     const modal = document.getElementById('blog-modal');
     const modalBody = document.getElementById('modal-body-content');
     
     if (modal && modalBody) {
-        // Đổ nội dung ảnh vào Modal
+
         modalBody.innerHTML = `
             <div class="flex flex-col items-center animate-fade-in">
                 <img src="${imageSrc}" class="w-full h-auto rounded-lg shadow-2xl border border-slate-700" alt="Certificate Full">
@@ -119,7 +116,7 @@ window.openImageModal = function(imageSrc) {
             </div>
         `;
         
-        // Hiển thị Modal
+
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
     }
