@@ -15,7 +15,7 @@ const blogDetails = {
                         <span class="bg-blue-500 text-black px-2 py-1 rounded mr-2">01</span> Nỗi Ám Ảnh Mang Tên "Var"
                     </h4>
                     <p>
-                        Hãy quay ngược thời gian về những ngày đầu mình làm quen với JavaScript. Lúc đó, khái niệm <strong>Hoisting</strong> và <strong>Global Scope</strong> của biến <code>var</code> là một cơn ác mộng thực sự. Mình từng dành cả một đêm chỉ để tìm một cái bug "vô hình": một biến trong vòng lặp <code>for</code> vô tình ghi đè lên biến toàn cục khiến toàn bộ logic ứng dụng sụp đổ. 
+                        Hãy quay ngược thời gian về những ngày đầu ta làm quen với JavaScript. Lúc đó, khái niệm <strong>Hoisting</strong> và <strong>Global Scope</strong> của biến <code>var</code> là một cơn ác mộng thực sự. Mình từng dành cả một đêm chỉ để tìm một cái bug "vô hình": một biến trong vòng lặp <code>for</code> vô tình ghi đè lên biến toàn cục khiến toàn bộ logic ứng dụng sụp đổ. 
                     </p>
                     <p class="mt-2">
                         Khi ES6 ra đời với <code>let</code> và <code>const</code>, nó không chỉ là thêm từ khóa mới, mà là sự cứu rỗi về mặt tư duy. Nó ép lập trình viên phải có trách nhiệm hơn với phạm vi của biến, giúp code trở nên "đoán trước được" (predictable).
